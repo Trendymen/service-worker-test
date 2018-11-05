@@ -4,10 +4,15 @@
  *  time : 15:51
  */
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register("/service-worker/service-worker.js",{scope:"/service-worker/"}).then((reg) =>{
-    console.log(reg)
-  }).catch(err =>{
-    console.log(err)
-  })
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker/service-worker.js", {
+      scope: "/service-worker/"
+    })
+    .then(reg => {
+      console.log(reg);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
