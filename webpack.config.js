@@ -16,14 +16,18 @@ module.exports = {
     filename: "static/js/[name].[contentHash].js",
     publicPath: "/service-worker"
   },
+  module: {
+  },
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       filename: "index.html"
     }),
-    new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, './service-worker.js'),
-      to: ""
-    }])
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, "./service-worker.js"),
+        to: ""
+      }
+    ])
   ]
 };
